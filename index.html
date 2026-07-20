@@ -24,7 +24,8 @@
   <meta name="twitter:image" content="https://RankAndReachHub.com/assets/og-image.jpg" />
 
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%232454ff%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22white%22 text-anchor=%22middle%22 font-family=%22Arial%22>R</text></svg>" />
+  <link rel="icon" type="image/png" href="assets/favicon.png"/>
+  <link rel="apple-touch-icon" href="assets/favicon.png"/>
 
   <!-- Fonts: Space Grotesk (display) + Inter (body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -62,7 +63,7 @@
   <header class="site-header">
     <nav class="navbar" aria-label="Primary">
       <a href="index.html" class="brand" aria-label="Rank and Reach Hub — Home">
-        <span class="brand-mark" aria-hidden="true">R</span>
+        <img src="assets/logo-icon.png" alt="Rank and Reach Hub logo" class="brand-mark" width="38" height="26" loading="lazy"/>
         Rank and Reach Hub
       </a>
 
@@ -115,50 +116,126 @@
             <a href="services.html" class="btn btn-outline">Explore Services</a>
           </div>
           <div class="hero-stats">
-            <div><strong>1,200+</strong><span>Guest Posts Published</span></div>
-            <div><strong>450+</strong><span>Happy Clients Worldwide</span></div>
-            <div><strong>92%</strong><span>Client Retention Rate</span></div>
+            <div><strong>100%</strong><span>White-Hat Methods</span></div>
+            <div><strong>Manual</strong><span>Link Vetting on Every Placement</span></div>
+            <div><strong>Direct</strong><span>Access to Your Strategist</span></div>
           </div>
         </div>
 
         <div class="hero-visual">
-          <div class="rank-card glass reveal">
-            <div class="rank-card-head">
-              <span>Keyword: "best project management tool"</span>
-              <strong>#1</strong>
+          <div class="dashboard-card glass reveal" id="seo-dashboard">
+            <div class="dashboard-head">
+              <div class="dashboard-head-label">
+                <span class="dashboard-pulse" aria-hidden="true"></span>
+                Sample SEO Performance
+              </div>
+              <span class="badge dashboard-badge">Example Dashboard</span>
             </div>
-            <div class="sparkline-wrap">
-              <svg viewBox="0 0 400 160" role="img" aria-label="Chart showing a keyword ranking climbing from position 47 to position 1 over six months">
-                <polyline class="sparkline-path" points="10,140 80,132 150,100 220,70 290,40 380,16" />
-                <circle class="sparkline-dot" cx="380" cy="16" r="6" />
+
+            <div class="dashboard-hero" tabindex="0">
+              <div class="dashboard-hero-text">
+                <span class="dashboard-hero-label">Growth Percentage</span>
+                <span class="dashboard-hero-value"><span class="count-up" data-count="142" data-prefix="+" data-suffix="%">+0%</span></span>
+                <span class="dashboard-hero-sub">Organic visibility, 6-month sample period</span>
+              </div>
+              <svg class="dashboard-hero-spark" viewBox="0 0 160 56" role="img" aria-label="Sample upward trend line">
+                <polyline class="dashboard-spark-path" points="4,46 30,40 56,34 82,26 108,16 156,6" />
+                <circle class="dashboard-spark-dot" cx="156" cy="6" r="4"></circle>
               </svg>
             </div>
-            <div class="flex-between" style="margin-top:0.5rem;">
-              <span style="font-size:0.78rem;color:#93a0c9;">Month 1 · Rank #47</span>
-              <span style="font-size:0.78rem;color:#93a0c9;">Month 6 · Rank #1</span>
+
+            <div class="dashboard-grid">
+              <div class="dashboard-metric" tabindex="0">
+                <div class="dashboard-metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17 9 11l4 4 8-8"/><path d="M15 7h6v6"/></svg>
+                </div>
+                <div class="dashboard-metric-value"><span class="count-up" data-count="48200" data-format="k">0</span></div>
+                <div class="dashboard-metric-label">Organic Traffic / mo</div>
+                <div class="dashboard-metric-trend up">▲ 64%</div>
+              </div>
+
+              <div class="dashboard-metric" tabindex="0">
+                <div class="dashboard-metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.6" fill="currentColor"/></svg>
+                </div>
+                <div class="dashboard-metric-value"><span class="count-up" data-count="216">0</span></div>
+                <div class="dashboard-metric-label">Keyword Rankings (Top 10)</div>
+                <div class="dashboard-metric-trend up">▲ 48 new</div>
+              </div>
+
+              <div class="dashboard-metric" tabindex="0">
+                <div class="dashboard-metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 15 15 9"/><path d="M10.5 6.5 12 5a3.5 3.5 0 0 1 5 5l-1.5 1.5"/><path d="M13.5 17.5 12 19a3.5 3.5 0 0 1-5-5l1.5-1.5"/></svg>
+                </div>
+                <div class="dashboard-metric-value"><span class="count-up" data-count="340">0</span></div>
+                <div class="dashboard-metric-label">High-Quality Backlinks</div>
+                <div class="dashboard-metric-trend up">▲ 120 this qtr</div>
+              </div>
+
+              <div class="dashboard-metric" tabindex="0">
+                <div class="dashboard-metric-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div class="dashboard-metric-value"><span class="count-up" data-count="46">0</span><span class="dashboard-metric-unit">/100</span></div>
+                <div class="dashboard-metric-label">Domain Authority</div>
+                <div class="dashboard-metric-trend up">▲ 18 pts</div>
+              </div>
             </div>
+
+            <p class="dashboard-disclaimer">Sample SEO Performance — illustrative example data for demonstration only. Not actual client results; real outcomes vary by niche, competition and starting point.</p>
           </div>
           <div class="floating-badge glass badge-top">
-            <span class="dot"></span> Domain Rating 68 → 74
+            <span class="dot"></span> White-Hat Only
           </div>
           <div class="floating-badge glass badge-bottom">
-            <span class="dot"></span> Organic Traffic +214%
+            <span class="dot"></span> Transparent Reporting
           </div>
         </div>
       </div>
     </section>
 
-    <!-- =============================== TRUSTED BY =============================== -->
+    <!-- =============================== TRUST BADGES =============================== -->
     <section class="trusted-strip">
       <div class="container">
-        <p>Trusted by growth teams at</p>
+        <p>What every engagement is built on</p>
         <div class="logo-row">
-          <span>Northwind</span>
-          <span>Bluepeak</span>
-          <span>Vertex Labs</span>
-          <span>Craftly</span>
-          <span>Lumen SaaS</span>
-          <span>Marketly</span>
+          <span>100% White-Hat</span>
+          <span>Manually Vetted Links</span>
+          <span>Transparent Reporting</span>
+          <span>Direct Founder Access</span>
+          <span>No Long-Term Lock-In</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================ FOUNDER SECTION ================================ -->
+    <section class="section-alt founder-section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Meet the Founder</span>
+          <h2>The person behind every campaign</h2>
+        </div>
+        <div class="founder-card reveal">
+          <div class="founder-photo-wrap">
+            <img src="assets/founder-ali-raza.jpg" alt="Ali Raza, Founder and SEO Outreach Specialist at Rank and Reach Hub" class="founder-photo" width="260" height="260" loading="lazy"/>
+          </div>
+          <div class="founder-details">
+            <h3>Ali Raza</h3>
+            <p class="founder-title">Founder &amp; SEO Outreach Specialist, Rank and Reach Hub</p>
+            <p>Ali Raza is the Founder of Rank and Reach Hub, specializing in Guest Posting, White Hat Link Building, Blogger Outreach, and SEO solutions. My mission is to help businesses improve their online visibility through ethical SEO strategies, high-quality backlinks, and long-term organic growth.</p>
+            <div class="founder-socials" aria-label="Ali Raza's social links">
+              <a href="https://www.linkedin.com/in/ali-raza-3a3469418" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Ali Raza on LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9.5 9H13v1.7h.05c.5-.9 1.7-1.9 3.5-1.9 3.7 0 4.45 2.4 4.45 5.6V21H17v-6c0-1.4 0-3.2-2-3.2s-2.3 1.5-2.3 3.1V21H9.5Z"/></svg>
+              </a>
+              <a href="mailto:razaworkspro@gmail.com" class="social-icon" aria-label="Email Ali Raza">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 6 8 7 8-7"/></svg>
+              </a>
+              <a href="https://wa.me/923094999495" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Message Ali Raza on WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.6 17L2 22l5.2-1.6A11 11 0 1 0 20.5 3.5Zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-3.1 1 1-3-.2-.3A9 9 0 1 1 12 20.5Zm5-6.7c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.2.2-.3.2-.5.1a7.3 7.3 0 0 1-3.6-3.2c-.3-.5.3-.5.7-1.6.1-.2 0-.4 0-.5L9.4 7.1c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.6-.7 1.8-1.3.2-.6.2-1.1.2-1.3-.1-.1-.3-.2-.5-.3Z"/></svg>
+              </a>
+            </div>
+            <a href="contact.html" class="btn btn-primary" style="margin-top:1.4rem;">Let's Work Together</a>
+          </div>
         </div>
       </div>
     </section>
@@ -235,7 +312,7 @@
     <!-- =============================== WHY CHOOSE US =============================== -->
     <section class="why-us section-alt">
       <div class="container">
-        <div class="grid grid-2" style="align-items:center;">
+        <div class="grid" style="align-items:center;max-width:760px;margin:0 auto;">
           <div class="reveal">
             <span class="eyebrow">Why Choose Us</span>
             <h2>An SEO partner that treats your growth like our own</h2>
@@ -257,20 +334,6 @@
             </div>
           </div>
 
-          <div class="grid grid-2 reveal reveal-delay-1">
-            <div class="stat-block glass-light" style="padding:2rem 1rem;border-radius:16px;">
-              <strong>10+</strong><span>Years Combined Experience</span>
-            </div>
-            <div class="stat-block glass-light" style="padding:2rem 1rem;border-radius:16px;">
-              <strong>60+</strong><span>Countries Served</span>
-            </div>
-            <div class="stat-block glass-light" style="padding:2rem 1rem;border-radius:16px;">
-              <strong>3,000+</strong><span>Backlinks Delivered</span>
-            </div>
-            <div class="stat-block glass-light" style="padding:2rem 1rem;border-radius:16px;">
-              <strong>4.9/5</strong><span>Average Client Rating</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>
@@ -314,75 +377,79 @@
       </div>
     </section>
 
-    <!-- =============================== CASE STUDIES =============================== -->
+    <!-- =============================== APPROACH BY INDUSTRY =============================== -->
     <section class="case-studies">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Case Studies</span>
-          <h2>Real campaigns, real ranking gains</h2>
-          <p>A snapshot of the kind of movement our clients see within the first two quarters.</p>
+          <span class="eyebrow">How We Work</span>
+          <h2>An approach built around your industry</h2>
+          <p>As a newly founded agency, we lead with process and transparency rather than recycled statistics. Here's how a campaign is typically shaped.</p>
         </div>
 
         <div class="grid grid-3">
           <article class="case-card reveal">
-            <div class="case-media"><span class="metric">+214%</span></div>
+            <div class="case-media"><span class="metric">SaaS</span></div>
             <div class="case-body">
               <span class="tag">SaaS · Link Building</span>
-              <h3>Project management SaaS climbs to #1</h3>
-              <p>A six-month link building and content refresh campaign for a mid-market SaaS brand.</p>
+              <h3>Link building around core product keywords</h3>
+              <p>A link building and content refresh plan aimed at the keywords that actually drive trial and demo signups.</p>
             </div>
           </article>
           <article class="case-card reveal reveal-delay-1">
-            <div class="case-media"><span class="metric">+178%</span></div>
+            <div class="case-media"><span class="metric">E-com</span></div>
             <div class="case-body">
               <span class="tag">E-commerce · Technical SEO</span>
-              <h3>Online store fixes crawl issues, doubles traffic</h3>
-              <p>Technical SEO overhaul plus niche edits unlocked organic growth for a Shopify store.</p>
+              <h3>Fixing crawl issues before scaling content</h3>
+              <p>A technical SEO overhaul plus niche edits, so growth isn't capped by indexation problems no one noticed.</p>
             </div>
           </article>
           <article class="case-card reveal reveal-delay-2">
-            <div class="case-media"><span class="metric">+96</span></div>
+            <div class="case-media"><span class="metric">Startup</span></div>
             <div class="case-body">
               <span class="tag">Startup · Guest Posting</span>
-              <h3>96 new keywords ranking on page one</h3>
-              <p>A blogger outreach and guest posting sprint built topical authority fast for a new startup.</p>
+              <h3>Building topical authority from zero</h3>
+              <p>A blogger outreach and guest posting sprint designed to build real topical authority fast for a new brand.</p>
             </div>
           </article>
         </div>
+        <p style="text-align:center;margin-top:2rem;"><a href="portfolio.html" class="btn btn-outline">See Our Full Approach</a></p>
       </div>
     </section>
 
-    <!-- ============================== TESTIMONIALS ============================== -->
+    <!-- ============================== WHY TRUST A NEW AGENCY ============================== -->
     <section class="testimonials section-dark">
       <div class="container">
         <div class="section-head reveal">
-          <span class="eyebrow">Client Testimonials</span>
-          <h2>What our clients say</h2>
+          <span class="eyebrow">Why Work With Us</span>
+          <h2>New agency, no shortcuts on how we work</h2>
         </div>
 
         <div class="grid grid-3">
           <div class="testimonial-card glass reveal">
-            <div class="stars">★★★★★</div>
-            <p class="quote">Our organic traffic more than doubled within four months. The reporting is transparent and the team actually explains the "why" behind every link.</p>
+            <p class="quote">Every backlink is manually reviewed for relevance and real traffic before it's ever recommended to a client — no bulk link-farm placements, ever.</p>
             <div class="testimonial-author">
-              <div class="avatar-circle">A</div>
-              <div><strong>Amara Chen</strong><span>Head of Growth, Craftly</span></div>
+              <div class="avatar-circle">
+                <img src="assets/founder-ali-raza.jpg" alt="Ali Raza, Founder of Rank and Reach Hub" width="44" height="44" loading="lazy" style="border-radius:50%;object-fit:cover;"/>
+              </div>
+              <div><strong>Ali Raza</strong><span>Founder, Rank and Reach Hub</span></div>
             </div>
           </div>
           <div class="testimonial-card glass reveal reveal-delay-1">
-            <div class="stars">★★★★★</div>
-            <p class="quote">We tried three other link building agencies before this one. Rank and Reach Hub is the only team that never sent us a spammy placement.</p>
+            <p class="quote">You'll get a direct line to the person actually doing the outreach and strategy work, not a rotating account manager reading from a template.</p>
             <div class="testimonial-author">
-              <div class="avatar-circle">D</div>
-              <div><strong>Daniel Reyes</strong><span>Founder, Marketly</span></div>
+              <div class="avatar-circle">
+                <img src="assets/founder-ali-raza.jpg" alt="Ali Raza, Founder of Rank and Reach Hub" width="44" height="44" loading="lazy" style="border-radius:50%;object-fit:cover;"/>
+              </div>
+              <div><strong>Ali Raza</strong><span>Founder, Rank and Reach Hub</span></div>
             </div>
           </div>
           <div class="testimonial-card glass reveal reveal-delay-2">
-            <div class="stars">★★★★★</div>
-            <p class="quote">Our local map pack rankings went from page three to the top three results in under sixty days. Genuinely impressive execution.</p>
+            <p class="quote">You'll see exactly which sites your links come from and why they were chosen — full transparency, from the free audit through every monthly report.</p>
             <div class="testimonial-author">
-              <div class="avatar-circle">S</div>
-              <div><strong>Sara Malik</strong><span>Owner, Bluepeak Dental</span></div>
+              <div class="avatar-circle">
+                <img src="assets/founder-ali-raza.jpg" alt="Ali Raza, Founder of Rank and Reach Hub" width="44" height="44" loading="lazy" style="border-radius:50%;object-fit:cover;"/>
+              </div>
+              <div><strong>Ali Raza</strong><span>Founder, Rank and Reach Hub</span></div>
             </div>
           </div>
         </div>
@@ -395,49 +462,49 @@
         <div class="section-head reveal">
           <span class="eyebrow">Pricing Plans</span>
           <h2>Simple pricing that scales with your growth</h2>
-          <p>Every plan includes strategy, execution and monthly reporting. Custom enterprise plans are available on request.</p>
+          <p>Every engagement includes strategy, execution and monthly reporting. Pricing is scoped to your goals — contact us for a custom quote.</p>
         </div>
 
         <div class="grid grid-3">
           <div class="pricing-card reveal">
             <h3>Starter</h3>
             <p>For small businesses and bloggers getting serious about SEO.</p>
-            <div class="price-amount">$499<span>/mo</span></div>
+            <div class="price-amount" style="font-size:1.5rem;">Custom Quote</div>
             <ul class="price-features">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>5 Guest Posts / Month</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Basic SEO Audit</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>On-Page Optimization</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Monthly Report</li>
             </ul>
-            <a href="contact.html" class="btn btn-dark btn-block">Get Started</a>
+            <a href="contact.html" class="btn btn-dark btn-block">Contact for a Custom Quote</a>
           </div>
 
           <div class="pricing-card featured reveal reveal-delay-1">
             <span class="pricing-ribbon">Most Popular</span>
             <h3>Growth</h3>
             <p>For startups and SaaS companies ready to scale organic traffic.</p>
-            <div class="price-amount">$999<span>/mo</span></div>
+            <div class="price-amount" style="font-size:1.5rem;">Custom Quote</div>
             <ul class="price-features">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>15 Guest Posts / Month</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Full Technical SEO Audit</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Link Building &amp; Niche Edits</li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Dedicated Account Manager</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Direct Access to Your Strategist</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Bi-Weekly Strategy Calls</li>
             </ul>
-            <a href="contact.html" class="btn btn-primary btn-block">Get Started</a>
+            <a href="contact.html" class="btn btn-primary btn-block">Contact for a Custom Quote</a>
           </div>
 
           <div class="pricing-card reveal reveal-delay-2">
             <h3>Enterprise</h3>
             <p>For agencies and e-commerce stores with multi-market SEO needs.</p>
-            <div class="price-amount">Custom</div>
+            <div class="price-amount" style="font-size:1.5rem;">Custom Quote</div>
             <ul class="price-features">
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Unlimited Guest Posts</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Multi-Site / Multi-Market SEO</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>White-Label Reporting</li>
               <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>Priority Support</li>
             </ul>
-            <a href="contact.html" class="btn btn-dark btn-block">Contact Sales</a>
+            <a href="contact.html" class="btn btn-dark btn-block">Contact for a Custom Quote</a>
           </div>
         </div>
       </div>
@@ -462,11 +529,11 @@
           </div>
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false">Can I cancel my plan anytime?<span class="plus">+</span></button>
-            <div class="faq-answer"><p>Yes, all plans are month-to-month with no long-term contracts. We just ask for 30 days' notice.</p></div>
+            <div class="faq-answer"><p>Yes. There are no long-term lock-in contracts — the commitment length is agreed with you upfront during your free consultation.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false">Do you work with international clients?<span class="plus">+</span></button>
-            <div class="faq-answer"><p>Absolutely — we serve clients across 60+ countries with multilingual outreach where needed.</p></div>
+            <div class="faq-answer"><p>Yes — we work with small businesses, startups, SaaS companies and agencies worldwide, all coordinated remotely.</p></div>
           </div>
           <div class="faq-item reveal">
             <button class="faq-question" aria-expanded="false">What reporting do I get?<span class="plus">+</span></button>
@@ -497,7 +564,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="brand" aria-label="Rank and Reach Hub — Home">
-            <span class="brand-mark" aria-hidden="true">R</span>
+            <img src="assets/logo-icon.png" alt="Rank and Reach Hub logo" class="brand-mark" width="38" height="26" loading="lazy"/>
             Rank and Reach Hub
           </a>
           <p>Grow Your Rankings. Build Authority. Drive Results. We help businesses worldwide climb search rankings with white-hat SEO and high-authority link building.</p>
@@ -550,9 +617,9 @@
       <div class="footer-bottom">
         <p>&copy; 2026 Rank and Reach Hub. All rights reserved.</p>
         <div class="flex gap-md">
-          <a href="#">Privacy Policy</a>
-          <a href="#">Terms of Service</a>
-          <a href="#">Sitemap</a>
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
+          <a href="cookie-policy.html">Cookie Policy</a>
         </div>
       </div>
     </div>

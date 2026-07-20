@@ -154,15 +154,49 @@ document.addEventListener("DOMContentLoaded", function () {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
       var successBox = document.querySelector("#contact-success");
-      if (contactForm.checkValidity()) {
-        if (successBox) {
-          successBox.classList.add("visible");
-          successBox.textContent = "Thanks! Your message has been received — our team will reply within 24 hours.";
-        }
-        contactForm.reset();
-      } else {
+
+      if (!contactForm.checkValidity()) {
         contactForm.reportValidity();
+        return;
       }
+
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
+      var originalBtnText = submitBtn ? submitBtn.textContent : "";
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = "Sending...";
+      }
+
+      var formData = new FormData(contactForm);
+      var encoded = new URLSearchParams(formData).toString();
+
+      // Netlify Forms: submit the encoded form data to "/" so Netlify's
+      // build-time form detection (data-netlify="true" on the <form>)
+      // picks up and stores the submission.
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encoded
+      })
+        .then(function () {
+          if (successBox) {
+            successBox.classList.add("visible");
+            successBox.textContent = "Thanks! Your message has been received — we'll reply within 24 hours.";
+          }
+          contactForm.reset();
+        })
+        .catch(function () {
+          if (successBox) {
+            successBox.classList.add("visible");
+            successBox.textContent = "Something went wrong sending your message. Please email razaworkspro@gmail.com directly or try again.";
+          }
+        })
+        .finally(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
+          }
+        });
     });
   }
 
@@ -244,5 +278,68 @@ document.addEventListener("DOMContentLoaded", function () {
       link.classList.add("active");
     }
   });
+
+  /* -----------------------------------------------------------------
+     11. SAMPLE SEO DASHBOARD — animated count-up numbers
+     Purely a display animation for the illustrative example figures
+     shown in the hero dashboard (clearly labeled on-page as sample
+     data) — it does not fetch or represent real client results.
+  ----------------------------------------------------------------- */
+  var dashboard = document.querySelector("#seo-dashboard");
+  if (dashboard) {
+    var countEls = dashboard.querySelectorAll(".count-up");
+    var prefersReducedMotion =
+      window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    var formatCount = function (value, format) {
+      if (format === "k") {
+        return (value / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+      }
+      return Math.round(value).toLocaleString("en-US");
+    };
+
+    var animateCount = function (el) {
+      var target = parseFloat(el.getAttribute("data-count")) || 0;
+      var prefix = el.getAttribute("data-prefix") || "";
+      var suffix = el.getAttribute("data-suffix") || "";
+      var format = el.getAttribute("data-format");
+
+      if (prefersReducedMotion) {
+        el.textContent = prefix + formatCount(target, format) + suffix;
+        return;
+      }
+
+      var duration = 1600;
+      var startTime = null;
+
+      function step(timestamp) {
+        if (startTime === null) startTime = timestamp;
+        var progress = Math.min((timestamp - startTime) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3); // easeOutCubic
+        el.textContent = prefix + formatCount(target * eased, format) + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        }
+      }
+      requestAnimationFrame(step);
+    };
+
+    if ("IntersectionObserver" in window) {
+      var dashboardObserver = new IntersectionObserver(
+        function (entries, observer) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              countEls.forEach(animateCount);
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.35 }
+      );
+      dashboardObserver.observe(dashboard);
+    } else {
+      countEls.forEach(animateCount);
+    }
+  }
 
 });
